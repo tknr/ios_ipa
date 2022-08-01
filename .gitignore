@@ -1,2 +1,3 @@
-ipa/
-public/
+ipa/*.ipa
+public/ipa/*.ipa
+
