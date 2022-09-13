@@ -19,7 +19,7 @@ BUNDLE_ID="${BUNDLE_ID_PREFIX}${NEW_BUNDLE_NAME}"
 echo "${BUNDLE_ID}"
 
 zsign -k ${PKEY} -m ${PROB} -n "${NEW_BUNDLE_NAME}" -b "${BUNDLE_ID}" -o ${DST_IPA} ${SRC_IPA}	
-IPA_LIST+="<li><a href='${BASENAME_IPA}'>${BASENAME_IPA}</li>\n";
+IPA_LIST+="<li><div><div>${BASENAME_IPA}</div><div><a href='${BASENAME_IPA}'>download</a></div></div></li>\n";
 done
 
 cat src/index.html | sed -e "s|#IPA_LIST#|${IPA_LIST}|g" > public/index.html 
