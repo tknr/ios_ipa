@@ -18,7 +18,7 @@ echo "${NEW_BUNDLE_NAME}"
 BUNDLE_ID="${BUNDLE_ID_PREFIX}${NEW_BUNDLE_NAME}"
 echo "${BUNDLE_ID}"
 
-zsign -f -k ${PKEY} -m ${PROB} -n "${NEW_BUNDLE_NAME}" -b "${BUNDLE_ID}" -o ${DST_IPA} ${SRC_IPA}	
+zsign -k ${PKEY} -m ${PROB} -n "${NEW_BUNDLE_NAME}" -b "${BUNDLE_ID}" -o ${DST_IPA} ${SRC_IPA}	
 IPA_LIST+="<li><div><div>${BASENAME_IPA}</div><div><a href='${BASENAME_IPA}'>download</a></div></div></li>\n";
 done
 
